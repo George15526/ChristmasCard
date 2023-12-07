@@ -6,10 +6,15 @@ turtle = Turtle()
 screen = Screen()
 screen.setup(800, 600)
 
-turtle.shape("square")
-turtle.up()
-turtle.goto(-330, -180)
-turtle.down()
-turtle.shapesize(130, 50)
+
+def f():
+    running = True
+    while running:
+        turtle.fd(50)
+        turtle.lt(60)
+
+screen.ontimer(f, 1000)   
+# f()   ### makes the turtle march around
+running = False
 
 turtle.screen.mainloop()

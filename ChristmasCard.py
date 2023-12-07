@@ -4,6 +4,8 @@ import random
 
 turtle = Turtle()
 screen = Screen()
+ORANGE = (255,165,0)
+YELLOW = (255,255,0)
 
 def draw_init():
     screen.setup(800, 600)
@@ -69,27 +71,28 @@ def brighten_star(r):
     turtle.goto(tree_x-r/2, tree_y+r/4)
     turtle.down()
     
-    turtle.color("yellow")
+    turtle.color(ORANGE)
     turtle.begin_fill()
     for i in range(5):
         turtle.forward(r)
         turtle.right(144)
     turtle.end_fill()
-
-    while True:
-        turtle.color("orange")
+    # running = True
+    for i in range(50):
+        turtle.color(ORANGE)
         turtle.begin_fill()
         for i in range(5):
             turtle.forward(r)
             turtle.right(144)
         turtle.end_fill()
         
-        turtle.color("yellow")
+        turtle.color(YELLOW)
         turtle.begin_fill()
         for i in range(5):
             turtle.forward(r)
             turtle.right(144)
         turtle.end_fill()
+        
 
 def write(name):
     turtle.up()
