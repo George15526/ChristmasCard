@@ -93,6 +93,13 @@ def brighten_star(r):
 
 def write(name):
     turtle.up()
+    turtle.goto(-320, -150)
+    turtle.down()
+    turtle.goto(-80, -150)
+    turtle.goto(-80, -270)
+    turtle.goto(-320, -270)
+    turtle.goto(-320, -150)
+    turtle.up()
     turtle.color("black")
     turtle.goto(-300, -200)
     turtle.write("Dear ", move = True, align = "left", font = ("Arial", 20, "normal"))
@@ -100,8 +107,6 @@ def write(name):
     turtle.write(name, move = True, align = "left", font = ("Arial", 20, "normal"))
     turtle.goto(-200, -250)
     turtle.write("Merry Christmas!", move = True, align = "center", font = ("Arial", 20, "normal"))
-    # turtle.write("\n")
-    # turtle.write("Merry Christmas!")
     
 # ==============================
 # main
